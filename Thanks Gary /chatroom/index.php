@@ -368,7 +368,7 @@ if(isset($_POST['logout'])){
     ?>
     </head>
   <body>
-    <h1>Welcome to AJAX Chat</h1>
+    <h1>Welcome to CHAT BOX 4000</h1>
     <?php
     if(isset($_SESSION['user_id'])){
       echo "Have fun chatting " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";
