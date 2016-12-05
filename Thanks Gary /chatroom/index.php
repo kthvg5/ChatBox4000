@@ -101,7 +101,7 @@ if(isset($_POST['logout'])){
 <html lang="en">
   <head>
     <meta charset="UTF8" />
-    <title>Welcome to AJAX Chat</title>
+    <title>Welcome to the CHAT BOX 4000</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="icon" type="image/png" href="favicon.ico" />
     <?php 
