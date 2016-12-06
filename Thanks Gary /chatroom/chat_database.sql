@@ -11,8 +11,8 @@
 -- Database: `ajaxchat`
 --
 
-CREATE DATABASE IF NOT EXISTS `ajaxchat`;
-USE `ajaxchat`;
+CREATE DATABASE IF NOT EXISTS `chatbox`;
+USE `chatbox`;
 
 -- --------------------------------------------------------
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `session` (
   `session_request_from` int(10) unsigned NOT NULL,
   `session_accepted` tinyint(1) NOT NULL DEFAULT '0',
   `session_stopped` tinyint(1) NOT NULL DEFAULT '0',
-  `creation_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `creation_date` timestamp NOT NULL DEFAULT '1970-01-01 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`session_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_level` enum('user','admin') CHARACTER SET utf8 NOT NULL,
   `user_logged_in` tinyint(1) NOT NULL DEFAULT '0',
   `user_createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `user_lastlogin` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `user_last_activity` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `user_lastlogin` timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
+  `user_last_activity` timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3;
 
