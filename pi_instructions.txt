@@ -1,0 +1,20 @@
+Basics:
+
+	Run every time to update Pi:
+		git pull
+		cd /var/www/html
+		sudo rm * 
+		cd /CS3100/Chatbox4000/Thanks_Gary
+		sudo cp * /var/www/html
+		sudo systemctl restart apache2.service
+		sudo systemctl restart mysql.service
+	Mysql info:
+		Username: root
+		Password: JoeMiner
+	The Pi should not require a password to use sudo. If it does, something broke and I need to fix it ASAP
+	To turn of the system (plese don't just unplug):
+		poweroff
+
+1: Update php.ini
+	a) navigate to where it is located (should be /etc/php/7.0/cli/php.ini but runing 'php --ini' will tell you where it is)
+	b) change the line 'short_open_tag = Off' to 'short_open_tag = On'. Should be around line 202
