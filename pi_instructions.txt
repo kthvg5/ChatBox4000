@@ -6,8 +6,9 @@ Basics:
 		sudo rm * 
 		cd /CS3100/Chatbox4000/Thanks_Gary
 		sudo cp * /var/www/html
-		sudo systemctl restart apache2.service
 		sudo systemctl restart mysql.service
+		sudo systemctl restart apache2.service
+	Run those last two commands after any changes.
 	Mysql info:
 		Username: root
 		Password: JoeMiner
@@ -16,5 +17,9 @@ Basics:
 		poweroff
 
 1: Update php.ini
-	a) navigate to where it is located (should be /etc/php/7.0/cli/php.ini but runing 'php --ini' will tell you where it is)
-	b) change the line 'short_open_tag = Off' to 'short_open_tag = On'. Should be around line 202
+	a) navigate to where it is located (mine is in /etc/php/7.0/cli/php.ini but runing 'php --ini' will tell you where it is)
+	b) change the line 'short_open_tag = Off' to 'short_open_tag = On'. Should be around line 202. Use Leafpad if it will let you.
+2: Import the database:
+	cd /var/www/html
+	mysql -u root -p < chat_database.sql
+	It will ask for a password. The password should be JoeMiner.

@@ -1,8 +1,8 @@
 <?php
 $hostname = "localhost";
 $username = "root";
-$password = "Ugene0907";
-$database = "ajaxchat";
+$password = "JoeMiner";
+$database = "chatbox";
 $port = 3306;
 $db = new mysqli($hostname, $username, $password, $database);
 $db->autocommit(TRUE);
