@@ -98,10 +98,12 @@ if(isset($_POST['logout'])){
 
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
+
     <meta charset="UTF8" />
-    <title>Welcome to the CHAT BOX 4000</title>
+    <title>Welcome to ChatBox4000</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <link rel="icon" type="image/png" href="favicon.ico" />
     <?php 
@@ -367,12 +369,50 @@ if(isset($_POST['logout'])){
     }
     ?>
     </head>
+	<style>
+	h1 {
+		color:blue;
+	}
+	header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+	article {
+    margin-left: 970px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+	h1.center {
+    margin: auto;
+    width: 38%;
+    //border: 3px solid #73AD21;
+    padding: 10px;
+}
+        h3.center {
+    margin-left: 970px;
+	
+    width: 60%;
+   // border: 3px solid #73AD21;
+    padding: 10px;
+}
+	</style>
   <body>
-    <h1>Welcome to CHAT BOX 4000</h1>
+    <header>
+	<h1>ChatBox4000</h1>
+	</header>
+	<h1 class= "center"> Your administrative group chat</h1>
+	<h3 class="center">
     <?php
+	
     if(isset($_SESSION['user_id'])){
-      echo "Have fun chatting " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";
+		
+      echo "Your logged on as:  " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";	
     }
+	
     if(isset($_SESSION['message'])) {
       echo '<p><span class="warning bold">' . $_SESSION['message'] . '</span></p>'; 
       $_SESSION['message'] = "";
@@ -385,6 +425,7 @@ if(isset($_POST['logout'])){
         echo '</ul>';
     }
     ?>
+	</h3>
     <div>
       <form method="post" action="">
       <?php
@@ -423,7 +464,11 @@ if(isset($_POST['logout'])){
           <div id='requestsPending'></div>
         </div>
       </div>
-      
+	  
+	  
+	  
+	  
+      <article>
       <div id='chatContainer'>
         <div id='chatWindow'></div>
         <br />
@@ -448,8 +493,10 @@ if(isset($_POST['logout'])){
       </div>
         <iframe id="upload_target" name="upload_target" style="width:500;height:100;border:1px solid #000; clear:both;display:none;"></iframe>
         <div id='debug' style="display:none">debug here</div>
+		</article>
     <?php
     }
     ?>
+	<footer>Copyright © Project12.com</footer>
   </body>
 </html>
