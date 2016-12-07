@@ -74,8 +74,9 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 CREATE TABLE IF NOT EXISTS `message` (
   `msg_contents` varchar(500) CHARACTER SET utf8 NOT NULL,
+  `msg_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`user_id`,`msg_contents`),
+  PRIMARY KEY (`msg_timestamp`, `user_id`),
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
