@@ -70,12 +70,12 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 --
 -- Table structure for table 'message'
---added by Emma W @ 4:05 PM, 6 Dec 16
+-- added by Emma W @ 4:05 PM, 6 Dec 16
 
 CREATE TABLE IF NOT EXISTS `message` (
   `msg_contents` varchar(500) CHARACTER SET utf8 NOT NULL,
   `user_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`user_id`,`msg_contents`)
+  PRIMARY KEY (`user_id`,`msg_contents`),
   FOREIGN KEY (`user_id`) REFERENCES `user`(`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
