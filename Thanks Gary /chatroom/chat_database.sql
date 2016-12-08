@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- added by Emma W @ 4:05 PM, 6 Dec 16
 
 CREATE TABLE IF NOT EXISTS `message` (
-  `msg_contents` varchar(500) CHARACTER SET utf8 NOT NULL,
+  `msg_contents` varchar(500) CHARACTER SET utf8 NOT NULL DEFAULT ' ',
   `msg_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`msg_timestamp`, `user_id`),
