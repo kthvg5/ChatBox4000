@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_level` enum('user','admin') CHARACTER SET utf8 NOT NULL,
   `user_logged_in` tinyint(1) NOT NULL DEFAULT '0',
   `user_createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `user_lastlogin` timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
-  `user_last_activity` timestamp NOT NULL DEFAULT '1970-01-01 00:00:00',
+  `user_lastlogin` timestamp NOT NULL DEFAULT '1970-01-01 00:00:01',
+  `user_last_activity` timestamp NOT NULL DEFAULT '1970-01-01 00:00:01',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3;
 
