@@ -87,7 +87,7 @@ require_once('conn.php');
   <?php
     if(!empty($_REQUEST['UserID'])) {
       $UserID = mysqli_real_escape_string($db,$_REQUEST['UserID']);
-      $sql = "SELECT * FROM message WHERE user_ID LIKE '%".$UserID."%'";
+      $sql = "SELECT * FROM chat WHERE from_user_id LIKE '%".$UserID."%'";
       $r_query = mysqli_query($db,$sql);
 	  if (!$r_query) {
         printf("Error: %s\n", mysqli_error($db));
@@ -98,9 +98,9 @@ require_once('conn.php');
 					echo 'For user ID ' .$UserID. ':'; 
 		 
 					while ($row = mysqli_fetch_array($r_query)){
-						echo '<br /> \"' .$row['msg_contents']. 
-						'\" || ' .$row['msg_timestamp']. 
-						' ||  user ID = ' .$row['user_ID'];
+						echo '<br /> <strong>Message</strong> :"' .$row['chat_text'].
+						' "   --   <strong>Time sent: </strong>   ' .$row['chat_date_sent']. 
+						'    --  <strong>user ID </strong>= ' .$row['from_user_id'];
 					}
 				}
 				else{

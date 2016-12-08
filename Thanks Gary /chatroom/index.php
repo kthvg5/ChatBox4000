@@ -399,6 +399,9 @@ if(isset($_POST['logout'])){
    // border: 3px solid #73AD21;
     padding: 10px;
 }
+body {
+    background-color: lightblue;
+}
 	</style>
   <body>
     <header>
@@ -411,7 +414,7 @@ if(isset($_POST['logout'])){
     if(isset($_SESSION['user_id'])){
 		
       echo "Your logged on as:  " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";
-	echo' <FORM METHOD="Link" ACTION="admin.php"><INPUT TYPE="submit" VALUE="Search"></FORM>';
+	echo' <FORM METHOD="Link" ACTION="admin.php"><INPUT TYPE="submit" VALUE="Admin Search"></FORM>';
     }
 	
     if(isset($_SESSION['message'])) {
