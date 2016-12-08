@@ -410,7 +410,8 @@ if(isset($_POST['logout'])){
 	
     if(isset($_SESSION['user_id'])){
 		
-      echo "Your logged on as:  " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";	
+      echo "Your logged on as:  " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";
+	echo' <FORM METHOD="Link" ACTION="admin.php"><INPUT TYPE="submit" VALUE="Search"></FORM>';
     }
 	
     if(isset($_SESSION['message'])) {
