@@ -374,34 +374,34 @@ if(isset($_POST['logout'])){
 		color:blue;
 	}
 	header, footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-}
-	article {
-    margin-left: 970px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
-}
+		padding: 1em;
+		color: white;
+		background-color: black;
+		clear: left;
+		text-align: center;
+	}
+	//article {
+		// margin-left: 970px;
+		//border-left: 1px solid gray;
+		//padding: 1em;
+		//overflow: hidden;
+	//}
 	h1.center {
-    margin: auto;
-    width: 38%;
-    //border: 3px solid #73AD21;
-    padding: 10px;
-}
-        h3.center {
-    margin-left: 970px;
-	
-    width: 60%;
-   // border: 3px solid #73AD21;
-    padding: 10px;
-}
-body {
-    background-color: lightblue;
-}
+		margin: auto;
+		width: 38%;
+		//border: 3px solid #73AD21;
+		padding: 10px;
+	}
+	h3.center {
+		margin-left: 300px;
+		text-align: right;
+		width: 60%;
+		// border: 3px solid #73AD21;
+		padding: 10px;
+	}
+	body {
+		background-color: lightblue;
+	}
 	</style>
   <body>
     <header>
