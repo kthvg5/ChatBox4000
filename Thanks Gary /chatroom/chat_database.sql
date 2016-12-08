@@ -8,8 +8,12 @@
 -- PHP Version: 5.4.1
 
 --
--- Database: `ajaxchat`
+-- Database: `chatbox`
 --
+-- Dropping better allows us to change stuff
+-- quickly and easily.
+DROP DATABASE IF EXISTS chatbox;
+
 
 CREATE DATABASE IF NOT EXISTS `chatbox`;
 USE `chatbox`;
@@ -84,6 +88,3 @@ CREATE TABLE IF NOT EXISTS `message` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `user_name`, `user_first`, `user_last`, `salt`, `user_password`, `user_level`, `user_logged_in`, `user_createdate`, `user_lastlogin`, `user_last_activity`) VALUES
-(1, 'mike', 'Mike', 'Abbott', 'bVFEWiXRJgk2-op6CJ8CmRbMq6N-M2dBB8UWBxFL6BjaURpRfF2bIm6KK6Qpv4CT', 'a709e1791442a4f2ed461c16a7046cb52243da07', 'user', 0, '2009-12-15 22:25:30', '2012-06-14 20:16:33', '2012-06-14 20:27:20'),
-(2, 'test', 'Test', 'Test', 'B3TcHsiWF7TUZ.rWcAcfeSDpPudqsRKV-MwHKH1MAgEr7u6a.IIhWr5ZPaSxUiR0', '9ae3b9cb4244bc17ac16597afcfa6f531f5afffc', 'user', 0, '2010-03-26 00:17:19', '2012-06-14 18:53:58', '2012-06-14 19:09:19');
