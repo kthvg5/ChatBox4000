@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `session` (
   `session_request_from` int(10) unsigned NOT NULL,
   `session_accepted` tinyint(1) NOT NULL DEFAULT '0',
   `session_stopped` tinyint(1) NOT NULL DEFAULT '0',
-  `creation_date` timestamp NOT NULL DEFAULT '1970-01-01 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `creation_date` timestamp NOT NULL DEFAULT '1970-01-01 00:00:01' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`session_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
