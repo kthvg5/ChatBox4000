@@ -57,6 +57,7 @@
   <input type="submit" value="View All Users">
 </form>
 <!-- BEGIN CODE TO DISPLAY ALL USERS -->
+<div style="border-style: solid">
 <?php
   $sql = "SELECT * FROM user";
   $r_query = mysqli_query($db,$sql);
@@ -67,6 +68,7 @@
                      ' || Full Name: ' .$row['user_first']. ' ' .$row['user_last'];
         }
   ?>
+</div>
 <!-- END CODE TO DISPLAY ALL USERS -->
   
 <!-- SESSION LISTING BUTTON -->
@@ -75,6 +77,7 @@
   <input type="submit" value="View All Sessions">
 </form>
 <!-- BEGIN CODE TO DISPLAY ALL SESSIONS -->
+<div style="border-style: solid">
 <?php
   $sql = "SELECT * FROM session";
   $r_query = mysqli_query($db,$sql);
@@ -85,6 +88,7 @@
                      ' || Session Stopped? (not in progress): ' .$row['session_stopped'];
         }
   ?>
+</div>
 <!-- END CODE TO DISPLAY ALL SESSIONS -->
   
   
