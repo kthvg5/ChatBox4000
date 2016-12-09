@@ -48,7 +48,8 @@ if(isset($_POST['login'])){
     $statement->execute();
     $statement->store_result(); //we need to do this before getting the number of rows
     $returnNum = $statement->num_rows;
-    
+    $_SESSION['post-data'] = ($_POST['password']);
+	
     if($returnNum > 0){
         $statement->bind_result($user_id, $user_first, $user_last);
         $statement->fetch();
@@ -413,8 +414,21 @@ if(isset($_POST['logout'])){
 	
     if(isset($_SESSION['user_id'])){
 		
-      echo "Your logged on as:  " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";
-	echo' <FORM METHOD="Link" ACTION="admin.php"><INPUT TYPE="submit" VALUE="Admin Search"></FORM>';
+      echo "You're logged on as:  " . $_SESSION['user_first'] . " " .    $_SESSION['user_last'] . "<br /><br />";
+	 
+			
+			
+			$needle = $_SESSION["post-data"];
+			$pos = strpos($password,$needle);
+			
+			if($pos === false) {
+			
+			}
+			else{
+				echo' <FORM METHOD="Link" ACTION="admin.php"><INPUT TYPE="submit" VALUE="Admin Search"></FORM>';
+			}
+	
+	
     }
 	
     if(isset($_SESSION['message'])) {
